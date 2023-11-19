@@ -1,5 +1,6 @@
 #!/bin/bash 
-for i in $(cat domainnames-first_class.txt); do
-        echo $i
-        recon-cli -w intel2 -m recon/domains-* -x;
+for i in $(cat hostsfinal.txt); do
+        echo  $i
+        recon-cli -w intel -C "db insert hosts ~$i~~~~~";
 done ;
+
