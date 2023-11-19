@@ -1,0 +1,5 @@
+#!/bin/bash 
+for i in $(cat domainnames-first_class.txt); do
+        echo $i
+        recon-cli -w intel2 -m recon/domains-* -x;
+done ;
